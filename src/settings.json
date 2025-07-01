@@ -1,0 +1,74 @@
+{
+  "name": "Madz Rest-Api",
+  "version": "v1.0.0",
+  "header": {
+    "status": "Online!"
+  },
+  "apiSettings": {
+    "creator": "Madz OFFC", 
+    "apikey": ["ryouki", "free"]
+  },
+  "categories": [
+    {
+      "name": "AI (Artificial Intelligence)",
+      "items": [
+        {
+          "name": "LuminAI",
+          "desc": "Talk with luminai",
+          "path": "/ai/luminai?text=&apikey=",
+          "status": "ready",
+          "params": {
+            "text": "Text for luminai to respond to",
+            "apikey": "Enter The Api Key"
+          }
+        },
+       {
+          "name": "HydroMind",
+          "desc": "See the list of supported AI models here: https://mind.hydrooo.web.id",
+          "path": "/ai/hydromind?text=&model=&apikey=",
+          "status": "ready",
+          "params": {
+            "text": "Teks atau perintah untuk chat AI",
+            "model":"1See the list of supported AI models here: https://mind.hydrooo.web.id",
+            "apikey": "Enter The Api Key"
+          }
+        },
+        {
+          "name": "Gpt Text To Vid",
+          "desc": "Text to Video by Gpt",
+          "path": "/ai/gpttovid?text=&apikey=",
+          "status": "ready",
+          "params": {
+            "text": "Text untuk generate vidio",
+            "apikey": "Enter The Api Key"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Search Tools",
+      "items": [
+        {
+          "name": "YouTube",
+          "desc": "Video search",
+          "path": "/search/youtube?q=&apikey=",
+          "status": "ready",
+          "params": {
+            "q": "Search query",
+            "apikey": "Enter The Api Key"
+          }
+        },
+        {
+          "name": "Npm Search",
+          "desc": "Package search",
+          "path": "/search/npm?q=&apikey=",
+          "status": "ready",
+          "params": {
+            "q": "Search query",
+            "apikey": "Enter The Api Key"
+          }
+        }
+      ]
+    }               
+  ]
+}

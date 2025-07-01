@@ -1,5 +1,6 @@
 const axios = require('axios');
 const FormData = require('form-data');
+const checkApiKey = require('../../../cekapikey.js')
 module.exports = function(app) {
     async function hydromind(content, model) {
         const form = new FormData();
@@ -12,7 +13,7 @@ module.exports = function(app) {
         })
         return data;
     }
-    app.get('/ai/hydromind', async (req, res) => {
+    app.get('/ai/hydromind', checkApiKey, async (req, res) => {
         try {
             const { text, model } = req.query;
             if (!text || !model) {

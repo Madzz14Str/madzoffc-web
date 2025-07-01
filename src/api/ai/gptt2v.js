@@ -4,6 +4,7 @@
 **/
 
 const axios = require('axios');
+const checkApiKey = require('../../../cekapikey.js')
 
 module.exports = function(app) {
   async function gptt2vid(prompt) {
@@ -38,7 +39,7 @@ module.exports = function(app) {
     }
   }
   
-  app.get('/ai/gpttovid', async (req, res) => {
+  app.get('/ai/gpttovid', checkApiKey, async (req, res) => {
     try {
       const { text } = req.query
       if(!text) {

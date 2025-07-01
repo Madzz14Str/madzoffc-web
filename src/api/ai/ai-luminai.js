@@ -1,4 +1,5 @@
 const axios = require('axios');
+const checkApiKey = require('../../../cekapikey.js')
 module.exports = function(app) {
     async function fetchContent(content) {
         try {
@@ -9,7 +10,7 @@ module.exports = function(app) {
             throw error;
         }
     }
-    app.get('/ai/luminai', async (req, res) => {
+    app.get('/ai/luminai', checkApiKey, async (req, res) => {
         try {
             const { text } = req.query;
             if (!text) {

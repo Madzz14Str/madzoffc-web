@@ -1,6 +1,7 @@
+const checkApiKey = require('../../../cekapikey.js')
 module.exports = function(app) {
     const yts = require('yt-search');
-    app.get('/search/youtube', async (req, res) => {
+    app.get('/search/youtube', checkApiKey, async (req, res) => {
         const { q } = req.query;
         if (!q) {
             return res.status(400).json({ status: false, error: 'Query is required' });
