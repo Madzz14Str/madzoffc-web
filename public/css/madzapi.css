@@ -203,7 +203,7 @@ input:checked + .slider::before {
 .title-container {
     display: flex;
     justify-content: center;
-    align-items: center; /* Tambahkan ini untuk alignment vertikal */
+    align-items: center; 
     gap: 1rem;
     margin-top: 70px;
 }
@@ -215,13 +215,13 @@ input:checked + .slider::before {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    margin: 0; /* Pastikan margin judul 0 */
+    margin: 0; 
     padding: 0;
 }
 
 .versi-title {
-    display: inline-flex; /* Ubah dari flex ke inline-flex */
-    align-items: center; /* Pusatkan konten vertikal */
+    display: inline-flex;
+    align-items: center; 
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     color: white;
     padding: 0.3rem 0.85rem;
@@ -229,6 +229,6 @@ input:checked + .slider::before {
     border-radius: 100px;
     font-weight: 600;
     box-shadow: 0 4px 10px rgba(108, 92, 231, 0.3);
-    height: fit-content; /* Pastikan tinggi sesuai konten */
-    margin: 0; /* Hilangkan margin */
+    height: fit-content; 
+    margin: 0;
 }
