@@ -4,7 +4,7 @@
   "description": "Madz Pasti Bisa",
   "main": "madz.js",
   "scripts": {
-    "test": "node madz.js"
+    "start": "node madz.js"
   },
   "keywords": [
     "madzoffc",
