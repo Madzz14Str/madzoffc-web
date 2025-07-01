@@ -1,0 +1,22 @@
+{
+  "name": "belajarweb",
+  "version": "1.0.0",
+  "description": "Madz Pasti Bisa",
+  "main": "madz.js",
+  "scripts": {
+    "test": "node madz.js"
+  },
+  "keywords": [
+    "madzoffc",
+    "website"
+  ],
+  "author": "MadzOffc",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^5.4.1",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "fs": "^0.0.1-security",
+    "path": "^0.12.7"
+  }
+}
