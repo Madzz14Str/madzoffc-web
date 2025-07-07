@@ -1,8 +1,8 @@
 {
-  "name": "Madz Rest-Api",
+  "name": "Madz OFFC Rest Api",
   "version": "v1.0.0",
   "header": {
-    "status": "Online!"
+    "status": "🟢 Online!"
   },
   "apiSettings": {
     "creator": "Madz OFFC", 

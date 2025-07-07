@@ -35,4 +35,18 @@ document.addEventListener("DOMContentLoaded", () => {
             localStorage.setItem("theme", isDark ? "dark" : "light");
         });
     }
+    (async () => {
+        try {
+            const json = await fetch("/src/settings.json");
+            if (!json.ok) throw new Error(json.status);
+            const data = await json.json();
+            console.log(data)
+
+            document.getElementById("namapi").textContent = data.name ?? 'Madoppc';
+            document.getElementById("versiapi").textContent = data.version;
+            document.getElementById("statusapi").textContent = data.header.status;
+        } catch (error) {
+            console.error(error);
+        }
+    })();
 });

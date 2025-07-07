@@ -3,7 +3,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="css/madzapi.css" />
-        <title>Madz OFFC Rest Api</title>
+        <title id="namapi"></title>
         <link
             href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
             rel="stylesheet"
@@ -40,24 +40,20 @@
             <ul>
                 <li><a href="/">Home</a></li>
                 <li><a href="/market">Marketplace</a></li>
-                <li><a href="/contect">Contact Me</a></li>
+                <li><a href="/contact">Contact Me</a></li>
             </ul>
         </nav>
-        <script
-            src="https://kit.fontawesome.com/a076d05399.js"
-            crossorigin="anonymous"
-        ></script>
-        <script src="js/madzapi.js"></script>
+
         <div class="title-container">
-            <h1 class="h1-title">Madz OFFC Rest Api</h1>
-            <div id="versi" class="versi-title">v1.0.0</div>
+            <h1 class="h1-title" id="namapi"></h1>
+            <div id="version" class="versi-title">v1.0.0</div>
         </div>
         <div class="container" id="dashboard">
             <h1 class="judul">DashBoard</h1>
             <div class="dashboard">
                 <div class="card">
                     <h3>API Status</h3>
-                    <div class="metric">🟢 Online</div>
+                    <div id="versionHeader" class="metric">Online!</div>
                     <div class="metric">Avg. Latency: <span>45ms</span></div>
                 </div>
 
@@ -68,5 +64,10 @@
                 </div>
             </div>
         </div>
+        <script
+            src="https://kit.fontawesome.com/a076d05399.js"
+            crossorigin="anonymous"
+        ></script>
+        <script src="js/madzapi.js" defer></script>
     </body>
 </html>
