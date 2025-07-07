@@ -37,14 +37,24 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     (async () => {
         try {
+            const litency = await fetch("/metrics/latency");
+            if (!litency.ok) throw new Error(litency.status);
+            const jsonn = await litency.json();
+            const datak = jsonn.__overall ?? 0;
+            const sec = (datak / 1000).toFixed(2)
+            document.getElementById("latency").textContent =
+                `${sec}s ${datak}ms`;
+
             const json = await fetch("/src/settings.json");
             if (!json.ok) throw new Error(json.status);
             const data = await json.json();
-            console.log(data)
 
-            document.getElementById("namapi").textContent = data.name ?? 'Madoppc';
+            document.getElementById("namapi").textContent = data.name;
             document.getElementById("versiapi").textContent = data.version;
-            document.getElementById("statusapi").textContent = data.header.status;
+            document.getElementById("statusapi").textContent =
+                data.header.status;
+            document.getElementById("dev").textContent =
+                data.apiSettings.creator;
         } catch (error) {
             console.error(error);
         }

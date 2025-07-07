@@ -17,7 +17,7 @@
         <header>
             <div class="logo-text">
                 <img src="/src/img/madz.png" class="img-kecil" />
-                <h1>Madz OFFC</h1>
+                <h1 id="dev"></h1>
             </div>
             <div class="header-controls">
                 <label class="theme-switch" aria-label="Ganti tema">
@@ -46,15 +46,15 @@
 
         <div class="title-container">
             <h1 class="h1-title" id="namapi"></h1>
-            <div id="version" class="versi-title">v1.0.0</div>
+            <div id="versiapi" class="versi-title"></div>
         </div>
         <div class="container" id="dashboard">
             <h1 class="judul">DashBoard</h1>
             <div class="dashboard">
                 <div class="card">
                     <h3>API Status</h3>
-                    <div id="versionHeader" class="metric">Online!</div>
-                    <div class="metric">Avg. Latency: <span>45ms</span></div>
+                    <div id="statusapi" class="metric"></div>
+                    <div class="metric">Avg. Latency: <span id="latency"></span></div>
                 </div>
 
                 <div class="card">

@@ -2,7 +2,7 @@ const axios = require('axios')
 const checkApiKey = require('../../../cekapikey.js')
 
 module.exports = function(app) {
-  app.get('/search/npm', checkApiKey, async (req, res) => {
+  app.get('/api/search/npm', checkApiKey, async (req, res) => {
     const { q } = req.query;
     if (!q) {
       return res.status(400).json({ status: false, error: 'Query is required' });

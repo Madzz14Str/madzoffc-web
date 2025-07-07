@@ -8,6 +8,12 @@ const secure = require('ssl-express-www');
 const app = express();
 const PORT = process.env.PORT || 8080 || 5000 || 3000;
 
+const { latencyTracker, getAverages } = require('./metrics');
+app.use(latencyTracker);
+app.get('/metrics/latency', (req, res) => {
+  res.json(getAverages());      
+});
+
 app.enable("trust proxy");
 app.set("json spaces", 2);
 
@@ -37,7 +43,6 @@ app.use((req, res, next) => {
     next();
 });
 
-// Load Route
 let totalRoutes = 0;
 const apiFolder = path.join(__dirname, "./src/api");
 fs.readdirSync(apiFolder).forEach(subfolder => {

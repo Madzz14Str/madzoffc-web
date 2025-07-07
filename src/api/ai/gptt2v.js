@@ -39,7 +39,7 @@ module.exports = function(app) {
     }
   }
   
-  app.get('/ai/gpttovid', checkApiKey, async (req, res) => {
+  app.get('/api/ai/gpttovid', checkApiKey, async (req, res) => {
     try {
       const { text } = req.query
       if(!text) {

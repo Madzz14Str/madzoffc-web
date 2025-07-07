@@ -13,7 +13,7 @@ module.exports = function(app) {
         })
         return data;
     }
-    app.get('/ai/hydromind', checkApiKey, async (req, res) => {
+    app.get('/api/ai/hydromind', checkApiKey, async (req, res) => {
         try {
             const { text, model } = req.query;
             if (!text || !model) {

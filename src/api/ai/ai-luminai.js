@@ -10,7 +10,7 @@ module.exports = function(app) {
             throw error;
         }
     }
-    app.get('/ai/luminai', checkApiKey, async (req, res) => {
+    app.get('/api/ai/luminai', checkApiKey, async (req, res) => {
         try {
             const { text } = req.query;
             if (!text) {
