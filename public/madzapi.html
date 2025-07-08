@@ -50,17 +50,45 @@
         </div>
         <div class="container" id="dashboard">
             <h1 class="judul">DashBoard</h1>
-            <div class="dashboard">
+            <div class="container-dashboard">
                 <div class="card">
                     <h3>API Status</h3>
                     <div id="statusapi" class="metric"></div>
-                    <div class="metric">Avg. Latency: <span id="latency"></span></div>
+                    <div class="metric">
+                        Avg. Latency: <span id="latency"></span>
+                    </div>
                 </div>
 
                 <div class="card">
                     <h3>Total Requests</h3>
-                    <div class="metric">Today: <span>1,234</span></div>
-                    <div class="metric">This Month: <span>28,901</span></div>
+                    <div class="metric">Today: <span id="dayreq"></span></div>
+                    <div class="metric">
+                        This Month: <span id="monthreq"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container" id="ApiDoc">
+            <h1 class="judul">Api Documentation</h1>
+            <div class="container-apidoc">
+                <div class="card-api">
+                    <ul>
+                        <li>
+                            <div class="header-row">
+                                <h1>Search Api..</h1>
+                                <input
+                                    type="text"
+                                    id="searchApi"
+                                    placeholder="Search"
+                                />
+                            </div>
+                        </li>
+                        <li>
+                            <h3>Api</h3>
+                            <h3>Api</h3>
+                            <h3>Api</h3>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>

@@ -1,18 +1,25 @@
 const fs = require("fs");
 const path = require("path");
 const cors = require("cors");
-const chalk = require('chalk');
+const chalk = require("chalk");
 const express = require("express");
-const secure = require('ssl-express-www');
+const secure = require("ssl-express-www");
+const {
+    latencyTracker,
+    getAverages,
+    countApiRequest,
+    requestStats
+} = require("./metrics");
 
 const app = express();
 const PORT = process.env.PORT || 8080 || 5000 || 3000;
 
-const { latencyTracker, getAverages } = require('./metrics');
 app.use(latencyTracker);
-app.get('/metrics/latency', (req, res) => {
-  res.json(getAverages());      
+app.get("/metrics/latency", (req, res) => {
+    res.json(getAverages());
 });
+app.use(countApiRequest);
+app.get("/metrics/countapirequest", requestStats)
 
 app.enable("trust proxy");
 app.set("json spaces", 2);
@@ -24,8 +31,8 @@ app.use(secure);
 app.use("/", express.static(path.join(__dirname, "public")));
 app.use("/src", express.static(path.join(__dirname, "src")));
 
-const settingsPath = path.join(__dirname, './src/settings.json');
-const settings = JSON.parse(fs.readFileSync(settingsPath, 'utf-8'));
+const settingsPath = path.join(__dirname, "./src/settings.json");
+const settings = JSON.parse(fs.readFileSync(settingsPath, "utf-8"));
 
 app.use((req, res, next) => {
     const originalJson = res.json;

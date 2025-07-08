@@ -37,6 +37,12 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     (async () => {
         try {
+          const reqq = await fetch("/metrics/countapirequest")
+          if(!reqq.ok) throw new Error(reqq.status)
+          const datareq = await reqq.json()
+          document.getElementById("dayreq").textContent = datareq.today
+          document.getElementById("monthreq").textContent = datareq.thisMonth
+          
             const litency = await fetch("/metrics/latency");
             if (!litency.ok) throw new Error(litency.status);
             const jsonn = await litency.json();

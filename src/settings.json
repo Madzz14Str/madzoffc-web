@@ -51,21 +51,21 @@
         {
           "name": "YouTube",
           "desc": "Video search",
-          "path": "/search/youtube?q=&apikey=",
+          "path": "/api/search/youtube?apikey=&q",
           "status": "ready",
           "params": {
-            "q": "Search query",
-            "apikey": "Enter The Api Key"
+            "apikey": "Enter The Api Key",
+            "q": "Search query"
           }
         },
         {
           "name": "Npm Search",
           "desc": "Package search",
-          "path": "/search/npm?q=&apikey=",
+          "path": "/api/search/npm?apikey=&q=",
           "status": "ready",
           "params": {
-            "q": "Search query",
-            "apikey": "Enter The Api Key"
+            "apikey": "Enter The Api Key",
+            "q": "Search query"
           }
         }
       ]
