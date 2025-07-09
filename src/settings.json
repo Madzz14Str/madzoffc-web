@@ -1,74 +1,97 @@
 {
-  "name": "Madz OFFC Rest Api",
-  "version": "v1.0.0",
-  "header": {
-    "status": "🟢 Online!"
-  },
-  "apiSettings": {
-    "creator": "Madz OFFC", 
-    "apikey": ["ryouki", "free"]
-  },
-  "categories": [
-    {
-      "name": "AI (Artificial Intelligence)",
-      "items": [
-        {
-          "name": "LuminAI",
-          "desc": "Talk with luminai",
-          "path": "/ai/luminai?text=&apikey=",
-          "status": "ready",
-          "params": {
-            "text": "Text for luminai to respond to",
-            "apikey": "Enter The Api Key"
-          }
-        },
-       {
-          "name": "HydroMind",
-          "desc": "See the list of supported AI models here: https://mind.hydrooo.web.id",
-          "path": "/ai/hydromind?text=&model=&apikey=",
-          "status": "ready",
-          "params": {
-            "text": "Teks atau perintah untuk chat AI",
-            "model":"1See the list of supported AI models here: https://mind.hydrooo.web.id",
-            "apikey": "Enter The Api Key"
-          }
-        },
-        {
-          "name": "Gpt Text To Vid",
-          "desc": "Text to Video by Gpt",
-          "path": "/ai/gpttovid?text=&apikey=",
-          "status": "ready",
-          "params": {
-            "text": "Text untuk generate vidio",
-            "apikey": "Enter The Api Key"
-          }
-        }
-      ]
+    "name": "Madz OFFC Rest Api",
+    "version": "v1.0.0",
+    "header": {
+        "status": "🟢 Online!"
     },
-    {
-      "name": "Search Tools",
-      "items": [
+    "apiSettings": {
+        "creator": "Madz OFFC",
+        "apikey": ["ryouki", "free"]
+    },
+    "categories": [
         {
-          "name": "YouTube",
-          "desc": "Video search",
-          "path": "/api/search/youtube?apikey=&q",
-          "status": "ready",
-          "params": {
-            "apikey": "Enter The Api Key",
-            "q": "Search query"
-          }
+            "name": "AI (Artificial Intelligence)",
+            "items": [
+                {
+                    "name": "LuminAI",
+                    "desc": "Talk with luminai",
+                    "path": "/api/ai/luminai?apikey=&text=",
+                    "status": "ready",
+                    "params": {
+                        "apikey": "Enter The Api Key",
+                        "text": "Text for luminai to respond to"
+                    }
+                },
+                {
+                    "name": "HydroMind",
+                    "desc": "See the list of supported AI models here: https://mind.hydrooo.web.id",
+                    "path": "/api/ai/hydromind?apikey=&text=&model=",
+                    "status": "ready",
+                    "params": {
+                        "apikey": "Enter The Api Key",
+                        "text": "Teks atau perintah untuk chat AI",
+                        "model": "1See the list of supported AI models here: https://mind.hydrooo.web.id"
+                    }
+                },
+                {
+                    "name": "Gpt Text To Video",
+                    "desc": "Text to Video by Gpt",
+                    "path": "/api/ai/gpttovid?apikey=&text=",
+                    "status": "ready",
+                    "params": {
+                        "apikey": "Enter The Api Key",
+                        "text": "Text untuk generate vidio"
+                    }
+                }
+            ]
         },
         {
-          "name": "Npm Search",
-          "desc": "Package search",
-          "path": "/api/search/npm?apikey=&q=",
-          "status": "ready",
-          "params": {
-            "apikey": "Enter The Api Key",
-            "q": "Search query"
-          }
+            "name": "Search Tools",
+            "items": [
+                {
+                    "name": "YouTube",
+                    "desc": "Video search",
+                    "path": "/api/search/youtube?apikey=&q=",
+                    "status": "ready",
+                    "params": {
+                        "apikey": "Enter The Api Key",
+                        "q": "Search query"
+                    }
+                },
+                {
+                    "name": "Npm Search",
+                    "desc": "Search package from npm",
+                    "path": "/api/search/npm?apikey=&q=",
+                    "status": "ready",
+                    "params": {
+                        "apikey": "Enter The Api Key",
+                        "q": "Search query"
+                    }
+                }
+            ]
+        },
+        {
+          "name": "Downloader Tools",
+          "items": [
+            {
+              "name": "Git Clone",
+              "desc": "Download Github Repositories",
+              "path": "/api/downloader/gitclone?apikey=&link=",
+              "params": {
+                "apikey": "Enter the apikey",
+                "link": "Enter link github repositories"
+              }
+            },
+            {
+              "name": "MediaFire",
+              "desc": "Download File From MediaFire",
+              "path": "/api/downloader/mediafire?apikey=&link=",
+              "params": {
+                "apikey": "Enter the apikey",
+                "link": "Enter link mediafire"
+              }
+            }
+            ]
         }
-      ]
-    }               
-  ]
+    ]
 }

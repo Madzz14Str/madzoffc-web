@@ -57,14 +57,30 @@ document.addEventListener("DOMContentLoaded", () => {
             const data = await json.json();
 
             const container = document.getElementById("docapi");
+            container.innerHTML = "";
             data.categories.forEach(category => {
                 const kelompokApi = document.createElement("h2");
                 kelompokApi.textContent = category.name;
                 container.appendChild(kelompokApi);
                 category.items.forEach(api => {
-                    const apii = document.createElement("h3");
-                    apii.textContent = api.name;
-                    container.appendChild(apii);
+                    const wrap = document.createElement("div");
+                    wrap.className = "api-item";
+
+                    wrap.innerHTML = `
+        <strong>${api.name}</strong> – ${api.desc}<br>
+        <code>${api.path}</code>
+      `;
+
+                    const btn = document.createElement("button");
+                    btn.textContent = "Coba";
+                    btn.className = "btn-test";
+                    btn.addEventListener("click", () => {
+                        navigator.clipboard.writeText(api.path);
+                        alert(`Endpoint disalin:\n${api.path}`);
+                    });
+
+                    wrap.appendChild(btn);
+                    container.appendChild(wrap);
                 });
             });
 
