@@ -3,22 +3,22 @@
     --secondary-color: #00bfff;
     --accent-color: #00cec9;
 
-    --nav-menu: #f8fafc; /* Diubah dari #f0f9ff ke lebih netral */
-    --nav-rgb: rgba(0, 0, 0, 0.1); /* Diperjelas transparansinya */
+    --nav-menu: #f8fafc;
+    --nav-rgb: rgba(0, 0, 0, 0.1);
 
-    --headfoot-yap: rgba(255, 255, 255, 0.98); /* Tetap sama */
-    --headfoot-yup: rgba(0, 0, 0, 0.05); /* Diperjelas transparansinya */
+    --headfoot-yap: rgba(255, 255, 255, 0.98); 
+    --headfoot-yup: rgba(0, 0, 0, 0.05); 
 
-    --bg-dua: #f8fafc; /* Diubah dari #f0f9ff ke lebih netral */
-    --bg-satu: #fff; /* Tetap sama */
-    --header-h: 122px; /* Tetap sama */
-    --bg-color: #ffffff; /* Diubah dari #f7fafc ke putih bersih */
-    --text-color: #334155; /* Diubah dari #000000 ke abu-abu gelap */
-    --switch-bg: #cbd5e1; /* Diubah dari #777 ke abu-abu lebih terang */
-    --switch-thumb: #fff; /* Tetap sama */
-    --switch-on: #94a3b8; /* Diubah dari #64748b ke lebih terang */
+    --bg-dua: #f8fafc; 
+    --bg-satu: #fff; 
+    --header-h: 122px; 
+    --bg-color: #ffffff; 
+    --text-color: #334155; 
+    --switch-bg: #cbd5e1; 
+    --switch-thumb: #fff; 
+    --switch-on: #94a3b8; 
 
-    --text-colorr: #1e293b; /* Diubah dari #1f2937 ke lebih gelap */
+    --text-colorr: #1e293b; 
 }
 
 * {
@@ -386,4 +386,18 @@ input:checked + .slider::before {
 .header-row input[type="text"]:focus {
   border-color: #0077ff;
   box-shadow: 0 0 8px rgba(0, 119, 255, 0.3);
+}
+.card-api h2 {
+  border-left: 6px solid var(--secondary-color);
+  padding-left: 17px;
+  color: var(--text-color);
+  user-select: none;
+}
+.card-api h3 {
+  color: var(--secondary-color);
+  user-select: none;
+  padding-left: 40px;
+}
+.buttonget {
+  color: var(--secondary-color);
 }
