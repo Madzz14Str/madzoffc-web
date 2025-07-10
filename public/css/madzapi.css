@@ -428,6 +428,18 @@ input:checked + .slider::before {
     font-size: 1rem;
     color: var(--text-color);
 }
+.api-status {
+  font-weight: bold;
+  font-size: 0.85rem;
+}
+
+.api-status.online {
+  color: #2ecc71; 
+}
+
+.api-status.down {
+  color: #e74c3c; 
+}
 
 footer {
     text-align: center;

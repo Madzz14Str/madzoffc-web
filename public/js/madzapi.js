@@ -35,6 +35,47 @@ document.addEventListener("DOMContentLoaded", () => {
             localStorage.setItem("theme", isDark ? "dark" : "light");
         });
     }
+
+    const renderApis = (data, filter = "") => {
+        const container = document.getElementById("docapi");
+        container.innerHTML = "";
+
+        data.categories.forEach(category => {
+            const matchedItems = category.items.filter(api => {
+                const text = `${api.name} ${api.desc}`.toLowerCase();
+                return text.includes(filter.toLowerCase());
+            });
+
+            if (matchedItems.length > 0) {
+                const kelompokApi = document.createElement("h2");
+                kelompokApi.textContent = category.name;
+                container.appendChild(kelompokApi);
+
+                matchedItems.forEach(api => {
+                    const wrap = document.createElement("div");
+                    wrap.className = "api-item";
+
+                    wrap.innerHTML = `
+                    <strong>${api.name}</strong> – <span class= "api-status ${api.status === "online" ? "online" : "down"}">${api.status}</span>
+                    <br>
+                    <code>${api.desc}</code>
+                `;
+
+                    const btn = document.createElement("button");
+                    btn.textContent = "TRY";
+                    btn.className = "btn-test";
+                    btn.addEventListener("click", () => {
+                        navigator.clipboard.writeText(api.path);
+                        alert(`Endpoint disalin:\n${api.path}`);
+                    });
+
+                    wrap.appendChild(btn);
+                    container.appendChild(wrap);
+                });
+            }
+        });
+    };
+
     (async () => {
         try {
             const reqq = await fetch("/metrics/countapirequest");
@@ -56,31 +97,12 @@ document.addEventListener("DOMContentLoaded", () => {
             if (!json.ok) throw new Error(json.status);
             const data = await json.json();
 
-            const container = document.getElementById("docapi");
-            container.innerHTML = "";
-            data.categories.forEach(category => {
-                const kelompokApi = document.createElement("h2");
-                kelompokApi.textContent = category.name;
-                container.appendChild(kelompokApi);
-                category.items.forEach(api => {
-                    const wrap = document.createElement("div");
-                    wrap.className = "api-item";
+            renderApis(data);
 
-                    wrap.innerHTML = `
-        <strong>${api.name}</strong> – ${api.desc}<br>
-      `;
-
-                    const btn = document.createElement("button");
-                    btn.textContent = "TRY";
-                    btn.className = "btn-test";
-                    btn.addEventListener("click", () => {
-                        navigator.clipboard.writeText(api.path);
-                        alert(`Endpoint disalin:\n${api.path}`);
-                    });
-
-                    wrap.appendChild(btn);
-                    container.appendChild(wrap);
-                });
+            const searchInput = document.getElementById("searchApi");
+            searchInput.addEventListener("input", () => {
+                const keyword = searchInput.value.trim();
+                renderApis(data, keyword);
             });
 
             document.getElementById("namapi").textContent = data.name;

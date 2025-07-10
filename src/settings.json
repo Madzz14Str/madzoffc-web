@@ -2,7 +2,7 @@
     "name": "Madz OFFC Rest Api",
     "version": "v1.0.0",
     "header": {
-        "status": "🟢 Online!"
+        "status": "🟢 online!"
     },
     "apiSettings": {
         "creator": "Madz OFFC",
@@ -26,7 +26,7 @@
                     "name": "LuminAI",
                     "desc": "Talk with luminai",
                     "path": "/api/ai/luminai?apikey=&text=",
-                    "status": "ready",
+                    "status": "online",
                     "params": {
                         "apikey": "Enter The Api Key",
                         "text": "Text for luminai to respond to"
@@ -36,7 +36,7 @@
                     "name": "HydroMind",
                     "desc": "See the list of supported AI models here: https://mind.hydrooo.web.id",
                     "path": "/api/ai/hydromind?apikey=&text=&model=",
-                    "status": "ready",
+                    "status": "online",
                     "params": {
                         "apikey": "Enter The Api Key",
                         "text": "Teks atau perintah untuk chat AI",
@@ -47,7 +47,7 @@
                     "name": "Gpt Text To Video",
                     "desc": "Text to Video by Gpt",
                     "path": "/api/ai/gpttovid?apikey=&text=",
-                    "status": "ready",
+                    "status": "online",
                     "params": {
                         "apikey": "Enter The Api Key",
                         "text": "Text untuk generate vidio"
@@ -62,7 +62,7 @@
                     "name": "YouTube",
                     "desc": "Video search",
                     "path": "/api/search/youtube?apikey=&q=",
-                    "status": "ready",
+                    "status": "online",
                     "params": {
                         "apikey": "Enter The Api Key",
                         "q": "Search query"
@@ -72,7 +72,7 @@
                     "name": "Npm Search",
                     "desc": "Search package from npm",
                     "path": "/api/search/npm?apikey=&q=",
-                    "status": "ready",
+                    "status": "online",
                     "params": {
                         "apikey": "Enter The Api Key",
                         "q": "Search query"
@@ -87,6 +87,7 @@
                     "name": "Git Clone",
                     "desc": "Download Github Repositories",
                     "path": "/api/downloader/gitclone?apikey=&link=",
+                    "status": "online",
                     "params": {
                         "apikey": "Enter the apikey",
                         "link": "Enter link github repositories"
@@ -96,6 +97,7 @@
                     "name": "MediaFire",
                     "desc": "Download File From MediaFire",
                     "path": "/api/downloader/mediafire?apikey=&link=",
+                    "status": "online",
                     "params": {
                         "apikey": "Enter the apikey",
                         "link": "Enter link mediafire"
@@ -105,6 +107,7 @@
                     "name": "TikTok",
                     "desc": "Download Video or Image From Tiktok",
                     "path": "/api/downloader/tiktok?apikey=&link=",
+                    "status": "online",
                     "params": {
                         "apikey": "Enter the apikey",
                         "link": "Enter link tiktok"
