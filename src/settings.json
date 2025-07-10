@@ -13,6 +13,16 @@
             "name": "AI (Artificial Intelligence)",
             "items": [
                 {
+                    "name": "BlackBox Ai",
+                    "desc": "Build with BlackBox",
+                    "path": "/api/ai/blackbox?apikey=&text=",
+                    "status": "offline",
+                    "params": {
+                        "apikey": "Enter The Api Key",
+                        "text": "Text for BlackBox to respond to"
+                    }
+                },
+                {
                     "name": "LuminAI",
                     "desc": "Talk with luminai",
                     "path": "/api/ai/luminai?apikey=&text=",
@@ -71,26 +81,35 @@
             ]
         },
         {
-          "name": "Downloader Tools",
-          "items": [
-            {
-              "name": "Git Clone",
-              "desc": "Download Github Repositories",
-              "path": "/api/downloader/gitclone?apikey=&link=",
-              "params": {
-                "apikey": "Enter the apikey",
-                "link": "Enter link github repositories"
-              }
-            },
-            {
-              "name": "MediaFire",
-              "desc": "Download File From MediaFire",
-              "path": "/api/downloader/mediafire?apikey=&link=",
-              "params": {
-                "apikey": "Enter the apikey",
-                "link": "Enter link mediafire"
-              }
-            }
+            "name": "Downloader Tools",
+            "items": [
+                {
+                    "name": "Git Clone",
+                    "desc": "Download Github Repositories",
+                    "path": "/api/downloader/gitclone?apikey=&link=",
+                    "params": {
+                        "apikey": "Enter the apikey",
+                        "link": "Enter link github repositories"
+                    }
+                },
+                {
+                    "name": "MediaFire",
+                    "desc": "Download File From MediaFire",
+                    "path": "/api/downloader/mediafire?apikey=&link=",
+                    "params": {
+                        "apikey": "Enter the apikey",
+                        "link": "Enter link mediafire"
+                    }
+                },
+                {
+                    "name": "TikTok",
+                    "desc": "Download Video or Image From Tiktok",
+                    "path": "/api/downloader/tiktok?apikey=&link=",
+                    "params": {
+                        "apikey": "Enter the apikey",
+                        "link": "Enter link tiktok"
+                    }
+                }
             ]
         }
     ]

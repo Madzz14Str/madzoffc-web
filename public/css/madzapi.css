@@ -429,10 +429,22 @@ input:checked + .slider::before {
     color: var(--text-color);
 }
 
-/* 7. RESPONSIVE: di layar ≥600 px, baris horizontal ----------------- */
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: var(--headfoot-yap);
+    color: #666;
+    font-size: 0.9rem;
+    box-shadow: 0 2px 10px var(--headfoot-yup);
+    transition:
+        background-color 0.3 ease,
+        box-shadow 0.3 ease;
+    margin-top: auto;
+}
+
 @media (min-width: 600px) {
     .api-item {
-        flex-direction: row; /* nama + desc + path + tombol sejajar */
+        flex-direction: row;
         align-items: center;
     }
     .api-item > * {
