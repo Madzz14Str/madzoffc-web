@@ -398,64 +398,35 @@ input:checked + .slider::before {
     user-select: none;
     padding-left: 40px;
 }
-.buttonget {
-    color: var(--secondary-color);
-}
-/* 1. Container setiap item API  ------------------------------------- */
+
 .api-item {
-    display: flex; /* jadikan baris */
-    flex-direction: column; /* default mobile: tumpuk */
-    gap: 0.4rem; /* jarak antar elemen */
-    padding: 0.8rem 0; /* ruang dalam */
-    border-bottom: 1px dashed #ccc; /* garis pemisah antar item */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.8rem 0;
+    border-bottom: 1px dashed #ccc;
+    gap: 0.5rem;
 }
 
-/* 2. Teks nama API  ------------------------------------------------- */
-.api-item strong {
-    font-size: 1rem;
-    color: var(--text-color);
-}
-
-/* 3. Deskripsi singkat  --------------------------------------------- */
-.api-item small {
-    color: #666;
-    font-size: 0.85rem;
-}
-
-/* 4. Path/endpoint  -------------------------------------------------- */
-.api-item code {
-    background: #f2f2f2;
-    color: #0077ff;
-    padding: 2px 4px;
-    border-radius: 4px;
-    font-size: 0.85rem;
-    word-break: break-all; /* biar tidak overflow */
-}
-
-/* 5. Status badge (ready / down)  ----------------------------------- */
-.api-status {
-    font-size: 0.8rem;
-    font-weight: 600;
-    color: #2ecc71; /* hijau */
-}
-.api-status.down {
-    color: #e74c3c;
-}
-
-/* 6. Tombol “Coba”  -------------------------------------------------- */
 .btn-test {
-    align-self: flex-start;
+    align-self: flex-end;
     padding: 0.35rem 0.9rem;
-    margin-top: 0.3rem;
     background: #00bfff;
     color: #fff;
     border: none;
     border-radius: 6px;
     cursor: pointer;
     transition: 0.2s;
+    margin-left: auto;
 }
+
 .btn-test:hover {
     background: #0088ff;
+}
+
+.api-item strong {
+    font-size: 1rem;
+    color: var(--text-color);
 }
 
 /* 7. RESPONSIVE: di layar ≥600 px, baris horizontal ----------------- */
@@ -469,5 +440,5 @@ input:checked + .slider::before {
     }
     .btn-test {
         margin-top: 0;
-    } /* hapus mt di mode horizontal */
+    }
 }

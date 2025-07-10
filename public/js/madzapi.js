@@ -68,11 +68,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
                     wrap.innerHTML = `
         <strong>${api.name}</strong> – ${api.desc}<br>
-        <code>${api.path}</code>
       `;
 
                     const btn = document.createElement("button");
-                    btn.textContent = "Coba";
+                    btn.textContent = "TRY";
                     btn.className = "btn-test";
                     btn.addEventListener("click", () => {
                         navigator.clipboard.writeText(api.path);
