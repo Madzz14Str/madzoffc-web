@@ -40,7 +40,7 @@ app.use((req, res, next) => {
         if (data && typeof data === "object") {
             const responseData = {
                 status: data.status,
-                creator: settings.apiSettings.creator || "Created by Madz OFFC",
+                creator: settings.apiSettings.creator || "Created by Hanz Pedia",
                 ...data
             };
             return originalJson.call(this, responseData);
@@ -79,15 +79,15 @@ console.log(
 );
 
 app.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname, "public", "madzweb.html"));
+    res.sendFile(path.join(__dirname, "public", "hanzweb.html"));
 });
 
 app.get("/restapi", (req, res) => {
-    res.sendFile(path.join(__dirname, "public", "madzapi.html"));
+    res.sendFile(path.join(__dirname, "public", "hanzapi.html"));
 });
 
 app.get("/store", (req, res) => {
-    res.sendFile(path.join(__dirname, "public", "madzstore.html"));
+    res.sendFile(path.join(__dirname, "public", "hanzpedia.html"));
 });
 
 app.listen(PORT, () => {
